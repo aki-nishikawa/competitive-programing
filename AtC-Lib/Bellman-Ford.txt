@@ -1,0 +1,6 @@
+struct Edge{
+  int to;
+  ll weight;
+  Edge(int to, ll weight):to(to), weight(w){}
+};
+using Graph = vector<vector<Edge>>;
