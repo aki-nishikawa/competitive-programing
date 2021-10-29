@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
 vector<int> Eratosthenes(const int N)
 {
     vector<bool> is_prime(N+1, true);

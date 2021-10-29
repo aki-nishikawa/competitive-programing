@@ -1,13 +1,6 @@
-    int n, m;
-    cin >> n >> m;
-    Graph G(n+1);
-    for(int i=0;i<m;i++){
-        int a,b;
-        ll weight;
-        cin >> a >> b >> weight;
-        G[a].push_back(Edge(b,weight));
-    }
-
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
 
 const ll INF = 1LL<<60;
 
@@ -31,4 +24,16 @@ vector<vector<ll>> Floyd_Warshall(Graph &G){
             for(int j = 1; j < graph_size; j++)
                 res[i][j] = min(res[i][j], res[i][k] + res[k][j]);
     return res;
+}
+
+int main(){
+    int n, m;
+    cin >> n >> m;
+    Graph G(n+1);
+    for(int i=0;i<m;i++){
+        int a,b;
+        ll weight;
+        cin >> a >> b >> weight;
+        G[a].push_back(Edge(b,weight));
+    }
 }

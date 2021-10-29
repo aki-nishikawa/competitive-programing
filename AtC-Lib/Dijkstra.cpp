@@ -1,16 +1,6 @@
-    int n, m;
-    cin >> n >> m;
-    Graph G(n+1);
-    for(int i=0;i<m;i++){
-        int a,b;
-        ll weight;
-        cin >> a >> b >> weight;
-        G[a].push_back(Edge(b,weight));
-        G[b].push_back(Edge(a,weight));
-    }
-
-
-
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
 
 const ll INF = 1LL<<60;
 
@@ -30,7 +20,7 @@ vector<ll> Dijkstra(Graph &G, int start){
     distance[start] = 0;
     que.push(make_pair(distance[start], start));
     while(!que.empty()){
-        auto [dist ,visit] = q.top();
+        auto [dist ,visit] = que.top();
         que.pop();
         if (distance[visit] != dist) continue;
         for(Edge& next_edge : G[visit]){
@@ -41,4 +31,17 @@ vector<ll> Dijkstra(Graph &G, int start){
         }
     }
     return distance;
+}
+
+int main(){
+    int n, m;
+    cin >> n >> m;
+    Graph G(n+1);
+    for(int i=0;i<m;i++){
+        int a,b;
+        ll weight;
+        cin >> a >> b >> weight;
+        G[a].push_back(Edge(b,weight));
+        G[b].push_back(Edge(a,weight));
+    }
 }

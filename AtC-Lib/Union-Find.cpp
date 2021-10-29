@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
 struct UnionFind{
     vector<int> par, siz;
     UnionFind(int n) : par(n, -1), siz(n, 1) {}

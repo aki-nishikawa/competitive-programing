@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
 template <typename T>
 vector<T> compress(vector<T> &X) {
     // ソートした結果を vals に

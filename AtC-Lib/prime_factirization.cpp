@@ -1,3 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
 vector<pair<ll, ll>> prime_factorize(ll n) {
     vector<pair<ll, ll>> res;
     for (ll i=2;i*i<=n;i++) {

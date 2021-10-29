@@ -1,8 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 struct BIT {
     private:
     vector<int> bit;
     int N;
-public:
+    public:
     BIT(int size){
         N = size;
         bit.resize(N + 1);
